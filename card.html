@@ -31,6 +31,7 @@ body{margin:0;color:var(--white);font:400 15px/1.5 var(--text);min-height:100%;
 /* language switch */
 .en,.tr{display:none}
 html[data-lang="en"] .en,html[data-lang="tr"] .tr{display:inline}
+html[data-lang="en"] .tr,html[data-lang="tr"] .en{display:none!important}
 html[data-lang="en"] .en.b,html[data-lang="tr"] .tr.b{display:block}
 .top{display:flex;align-items:center;justify-content:space-between;animation:rise .8s .05s both cubic-bezier(.2,.7,.2,1)}
 .brand{font:800 18px/1 var(--display);font-stretch:125%;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
@@ -84,7 +85,7 @@ html[data-lang="en"] .en.b,html[data-lang="tr"] .tr.b{display:block}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
 .stat{text-align:center;padding:12px 4px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
 .stat strong{display:block;font:900 22px/1 var(--display);font-stretch:112%;font-variant-numeric:tabular-nums;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{display:block;margin-top:6px;font-size:11px;color:var(--muted);letter-spacing:.04em}
+.stat span.en,.stat span.tr{margin-top:6px}.stat span{display:block;margin-top:6px;font-size:11px;color:var(--muted);letter-spacing:.04em}
 
 .cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding:16px;border-radius:16px;text-decoration:none;color:#fff;font:700 15px/1 var(--text);letter-spacing:.04em;background:var(--grad);background-size:200% 100%;animation:sheen2 5s ease-in-out infinite alternate;transform:translateZ(20px);transition:transform .2s}
 @keyframes sheen2{to{background-position:100% 0}}
